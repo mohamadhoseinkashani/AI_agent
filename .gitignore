@@ -9,3 +9,6 @@ wheels/
 # Virtual environments
 .venv
 .env
+.DS_Store
+calculator/pkg/__pycache__
+functions/__pycache__
