@@ -1,10 +1,10 @@
 # AI Agent
 
-An AI coding agent built in Python that can autonomously inspect and modify a codebase using LLM function calling.
+An AI coding agent built in Python that can autonomously inspect and modify a codebase using LLM function calling. Give it a prompt, and it plans which tools to use, calls them, reads the results, and iterates — similar to how tools like Cursor or Copilot Workspace work under the hood.
 
 Built as part of the [Boot.dev](https://www.boot.dev) "Build an AI Agent" course.
 
-> **Note:** This is a learning project / prototype built for a controlled local environment. Don't run it against code you care about without reviewing what it does first.
+> **Note:** This is a learning project / prototype built for a controlled local environment. Don't run it on code you don't trust — it can read, write, and execute Python files inside its working directory.
 
 ## What it can do
 
@@ -17,7 +17,7 @@ The agent has four tools, each implemented as a function the LLM can call:
 | `write_file` | Create or overwrite a file |
 | `run_python_file` | Execute a Python file with optional arguments and capture output |
 
-It also ships with a sample `calculator/` app that the agent can debug and fix — that's the test codebase used throughout the course.
+It also ships with a sample `calculator/` app that the agent can debug and fix — that's the test codebase used in the demos/tests.
 
 ## How it works
 
@@ -40,7 +40,7 @@ It also ships with a sample `calculator/` app that the agent can debug and fix �
 
 ## Running it locally
 
-**Prerequisites:** Python 3.13+ (see `.python-version`), [uv](https://docs.astral.sh/uv/), and an API key for the LLM provider used in `main.py` (set it in a `.env` file — check `main.py` / `config.py` for the variable name).
+**Prerequisites:** Python 3.13+ (see `.python-version`), [uv](https://docs.astral.sh/uv/), and an API key for the LLM provider used in `main.py` (set it in a `.env` file — check `main.py` / course instructions for the exact variable name).
 
 ```bash
 # Install dependencies
