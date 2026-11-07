@@ -1,5 +1,26 @@
 import os
 
+schema_Write_file = {
+    "type": "function",
+    "function": {
+        "name": "write_file",
+        "description": "write a given content to a given file that exist in a given working_directory (the content is being written at the end of the file it does not rewrite the file itself)",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "file_path": {
+                    "type": "string",
+                    "description": "Directory path to file from, relative to the working directory and the content that has to be written to end of the file(the defult is the working directory itself)",
+                },
+                "content": {
+                    "type": "string",
+                    "description": "the content that has to be written at the end of the file"
+                },
+            },
+        },
+    },
+}
+
 
 def write_file(working_directory: str, file_path: str, content: str) -> str:
     absolute_working_dir: str = os.path.abspath(working_directory)
